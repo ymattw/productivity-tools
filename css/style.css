@@ -4,6 +4,10 @@ body {
     font-family: "Roboto Slab", "Helvetica";
 }
 
+img {
+    box-shadow: 5pt 5pt 8pt grey;
+}
+
 .remark-container {
     width: 1024px;
     font-size: 160%;

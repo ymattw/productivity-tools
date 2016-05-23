@@ -7,8 +7,8 @@ class: center, middle
 Matthew Wang
 
 <small>
-Last updated: May 23, 2016<br>
-[github.com/ymattw/productivity-tools](https://github.com/ymattw/productivity-tools)
+Last updated: May 24, 2016<br>
+[github.com/ymattw](https://github.com/ymattw)
 </small>
 
 ---
@@ -39,6 +39,74 @@ class: center, middle
 ## Readline
 
 Speed up your command typing
+
+---
+
+### GNU readline
+
+[Readline](https://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) is not
+a command, it's a library for line editing used by most command line
+interfacing tools.  Try in bash and mysql session.
+
+Cursor moving:
+
+```
+C-a
+    Moves the cursor to the line start (key Home)
+
+C-e
+    Moves the cursor to the line end (key End)
+
+Alt-b
+    Moves the cursor backward one word
+
+Alt-f
+    Moves the cursor forward one word
+```
+
+---
+
+### GNU readline (cont.)
+
+Line editing:
+
+```
+C-w
+    Clears the word before the cursor
+
+C-u
+    Clears the line content before the cursor
+
+C-d
+    Delete the character underneath the cursor.
+
+C-x C-e
+    Edits current line with $EDITOR, or vi if undefined
+
+C-r
+     Reverse search command in history, a second Ctrl+r repeats
+
+C-s
+    Go back to the next more recent command of the research
+    (Pro tip: Add test -t 0 && stty stop undef to your .bashrc)
+```
+
+---
+
+### GNU readline (cont.)
+
+```
+Meta-. (Alt-.)
+    Insert the last argument of the previous command
+```
+
+Tip for iTerm user (Preference > Profile > Keys):
+
+<center>
+<img src="img/readline-iterm.jpg" />
+</center>
+
+Ref: https://en.wikipedia.org/wiki/GNU_Readline
 
 ---
 
@@ -102,5 +170,4 @@ class: center, middle
 
 ## Thank you!
 
-Matthew Wang<br>
-[github.com/ymattw](https://github.com/ymattw)
+[github.com/ymattw/productivity-tools](https://github.com/ymattw/productivity-tools)
