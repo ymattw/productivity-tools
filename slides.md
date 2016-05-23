@@ -191,6 +191,45 @@ Make version control easier
 
 ---
 
+### Git alias
+
+Less key strokes:
+
+```bash
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.info "remote -v show -n"
+git config --global alias.br branch
+git config --global alias.co checkout
+```
+
+See more in my [gitconfig.sh](https://github.com/ymattw/profiles/blob/master/git/gitconfig.sh).
+
+---
+
+### Useful config
+
+```bash
+# Use vim to edit commit log
+git config --global core.editor vim
+
+# Be colorful
+git config --global color.ui true
+
+# Use short commit hash
+git config --global log.abbrevcommit true
+
+# Show readable symbol for comm
+git config --global log.decorate short
+
+# Show foo/bar.c instead of [ab]/foo/bar.c
+git config --global diff.noprefix true
+```
+
+See more in my [gitconfig.sh](https://github.com/ymattw/profiles/blob/master/git/gitconfig.sh).
+
+---
+
 class: center, middle
 
 ## Bash PS1
