@@ -1,4 +1,4 @@
-# Slides powered by [remark](https://github.com/gnab/remark) for about productivity tools
+# Slides about productivity tools
 
 **Outline**
 
@@ -11,4 +11,5 @@
 - Vim plugins
 - Mosh
 
-View this [presentation](https://ymattw.github.com/productivity-tools) online.
+Powered by [remark](https://github.com/gnab/remark).  View this
+[presentation](https://ymattw.github.com/productivity-tools) online.
