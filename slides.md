@@ -24,7 +24,7 @@ Why tools matter
 ## Outline
 
 - Readline
-- Ssh agent
+- Ssh config
 - Git config
 - Bash PS1
 - Zsh / fish
@@ -96,7 +96,7 @@ C-s
 ### GNU readline (cont.)
 
 ```
-Meta-. (Alt-.)
+Meta-. (Alt-.) or ESC-.
     Insert the last argument of the previous command
 ```
 
@@ -112,9 +112,74 @@ Ref: https://en.wikipedia.org/wiki/GNU_Readline
 
 class: center, middle
 
-## Ssh agent
+## Ssh config
 
 Never type password again
+
+---
+
+### Ssh key
+
+Setup a key-pair if you haven't, secure it with a **passphrase**!
+
+```bash
+ssh-keygen -t rsa -b 2048
+```
+
+Install it to remote host
+
+```bash
+ssh-copy-id user@host
+```
+
+_But it asks me to input passphrase everytime?_
+
+---
+
+### Use ssh with an agent
+
+3 ways to invoke the daemon
+
+- `ssh-agent bash`
+- `eval $(ssh-agent)`
+- `ssh-agent > ~/.ssh-agent.rc && source ~/.ssh-agent.rc`
+
+Add key (asks passphrase once)
+
+- `ssh-add [~/.ssh/id_rsa]`
+
+Use (ssh will ask the agent for the key)
+
+- `ssh user@host`
+
+---
+
+### Save ssh options in config file
+
+Do you type this a lot of time?
+
+```
+ssh -l ymattw -p 2200 -i ~/.ssh/ymattw.key 192.168.1.2
+```
+
+Use ~/.ssh/config
+
+```
+Host dev
+    Hostname 192.168.1.2
+    Port 2200
+    Username ymattw
+    IdentityFile ~/.ssh/ymattw.key
+
+Host *
+    User me
+```
+
+Now just type `ssh dev`
+
+See all options: `man ssh_config`
+
+More tips see https://ymattw.github.io/ssh-essential/
 
 ---
 
