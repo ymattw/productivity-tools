@@ -26,7 +26,7 @@ Why tools matter
 - Readline
 - Ssh config
 - Git config
-- Bash PS1
+- Bash config
 - Zsh / fish
 - Screen / tmux
 - Vim plugins
@@ -156,7 +156,7 @@ Use (ssh will ask the agent for the key)
 
 ### Save ssh options in config file
 
-Do you type this a lot of time?
+Do you type this often?
 
 ```
 ssh -l ymattw -p 2200 -i ~/.ssh/ymattw.key 192.168.1.2
@@ -232,9 +232,76 @@ See more in my [gitconfig.sh](https://github.com/ymattw/profiles/blob/master/git
 
 class: center, middle
 
-## Bash PS1
+## Bash config
 
-Saves you lots of time
+Saves your fingers
+
+---
+
+### $PS1 is your prompt
+
+Do you often type `pwd`, `git status`, `git branch`?
+
+Or often type `echo $?` to tell exit status from last command?
+
+Let $PS1 do that automatically!
+
+<img src="img/bash-ps1.jpg" />
+
+---
+
+### Customize .bashrc
+
+Refer to [Controlling the Prompt](https://www.gnu.org/software/bash/manual/bashref.html#Controlling-the-Prompt)
+
+```
+\h  The hostname, up to the first '.'
+\H  The full hostname
+\t  The time, in 24-hour HH:MM:SS format
+\T  The time, in 12-hour HH:MM:SS format
+\u  The username of the current user
+\w  The current working directory
+\W  The basename of $PWD
+\$  If the effective uid is 0, #, otherwise $
+```
+
+---
+
+### Special notes
+
+Want ANSI color?  Refer to [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code).
+
+```
+\e[31m denotes foreground red
+\e[0m  resets ansi color
+```
+
+Cool, but note you need to <span class="red">surround
+non-printable chars with `\[` and `\]`</span>, otherwise your command
+line will be in a mess when it is wrapped to next line!
+
+```
+\]
+    Begin a sequence of non-printing characters. This could be used to
+    embed a terminal control sequence into the prompt.
+
+\]
+    End a sequence of non-printing characters.
+```
+
+---
+
+### PS1 example
+
+Ref: my [bashrc](https://github.com/ymattw/profiles/blob/master/bash/bashrc#L185-L219)
+
+```bash
+PS1="\$([[ \$? == 0 ]] && echo '${_DG}✔' || echo '${_DR}✘') \t "
+...
+PS1="${PS1}$(hostname -f)"
+PS1="${PS1}:\[\e[33m\]\w\[\e[0m\]"  # yellow cwd
+PS1="${PS1}\$(_git_active_branch)"  # git branch name
+```
 
 ---
 
