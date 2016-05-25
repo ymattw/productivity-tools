@@ -26,8 +26,7 @@ Why tools matter
 - Readline
 - Ssh config
 - Git config
-- Bash config
-- Zsh / fish
+- Shell config
 - Screen / tmux
 - Vim plugins
 - Mosh
@@ -232,15 +231,15 @@ See more in my [gitconfig.sh](https://github.com/ymattw/profiles/blob/master/git
 
 class: center, middle
 
-## Bash config
+## Shell config
 
 Saves your fingers
 
 ---
 
-### $PS1 is your prompt
+### Bash PS1
 
-Do you often type `pwd`, `git status`, `git branch`?
+Do you often type `pwd`, `git status`, `git branch` from bash command line?
 
 Or often type `echo $?` to tell exit status from last command?
 
@@ -291,9 +290,9 @@ line will be in a mess when it is wrapped to next line!
 
 ---
 
-### PS1 example
+### Bash PS1 example
 
-Ref: my [bashrc](https://github.com/ymattw/profiles/blob/master/bash/bashrc#L185-L219)
+Example:
 
 ```bash
 PS1="\$([[ \$? == 0 ]] && echo '${_DG}✔' || echo '${_DR}✘') \t "
@@ -303,13 +302,38 @@ PS1="${PS1}:\[\e[33m\]\w\[\e[0m\]"  # yellow cwd
 PS1="${PS1}\$(_git_active_branch)"  # git branch name
 ```
 
+You can do much more.  See also my
+[bashrc](https://github.com/ymattw/profiles/blob/master/bash/bashrc#L185-L219).
+
 ---
 
-class: center, middle
+### Zsh
 
-## Zsh / fish
+[zsh](https://en.wikipedia.org/wiki/Z_shell): Shell for Pros
 
-Shell for Pro's
+- Powerful completion
+- Sharing history among all instances
+- Spell correction
+- Themeable prompts
+- Loadable modules
+
+Refs:
+
+- [What are the cool features of zsh that beat other
+  shells?](https://www.quora.com/What-are-the-cool-features-of-zsh-that-beat-other-shells)
+- My [zshrc](https://github.com/ymattw/profiles/blob/master/zsh/zshrc)
+
+---
+
+### Fish shell
+
+[fish](https://fishshell.com/): Finally, a command line shell for the 90s (not
+for me :-)
+
+- Syntax highlighting
+- Autosuggestions
+- Sane Scripting
+- (90s want to be cool)
 
 ---
 
