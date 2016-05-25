@@ -302,8 +302,11 @@ PS1="${PS1}:\[\e[33m\]\w\[\e[0m\]"  # yellow cwd
 PS1="${PS1}\$(_git_active_branch)"  # git branch name
 ```
 
-You can do much more.  See also my
-[bashrc](https://github.com/ymattw/profiles/blob/master/bash/bashrc#L185-L219).
+You can do much more.  See also
+
+- My [bashrc](https://github.com/ymattw/profiles/blob/master/bash/bashrc#L185-L219)
+- [powerline](https://github.com/powerline/powerline) - powerful collection of
+  prompt
 
 ---
 
@@ -345,6 +348,108 @@ You need only one terminal window
 
 ---
 
+### Case study
+
+You are restoring your database from a backup, it won't complete in an hour,
+and suddenly
+
+1. Your wireless network is down and you lost connection (and your process was
+   killed by SIGHUP), or
+2. You realize you have to take off to pick up your kid from school in 5 minutes
+
+You will be regretted not starting your task from a screen/tmux session.
+
+---
+
+### Case study (cont.)
+
+If you started your task from a screen/tmux session:
+
+- For case 1, just **reattach** to the session once your network connection
+  restored, your task were continued there on server and the output is still
+  scrolling!
+
+- For case 2, just **close the lid** of your lap, leave and **reattach** from
+  home later, your task will be completed and waiting for you to review by
+  then!
+
+---
+
+### Screen
+
+screen - screen manager with VT100/ANSI terminal emulation
+
+- Keep your process running on server with pseudo ttys
+- (Re)attach from remote
+- Multiple windows (tabs) in one application
+- Usually default install on servers
+
+You need this in ~/.screenrc, default setting won't tell you anything.
+
+```
+hardstatus alwayslastline '%{WB}%-w%{bW}%n %t%f%{-}%+w %-12=%c %D %d'
+```
+
+Remember one key: `C-a ?`
+
+Ref: my [screenrc](https://github.com/ymattw/profiles/blob/master/screen/screenrc)
+
+---
+
+### Screen (cont.)
+
+<center>
+<img src="img/screen.jpg" />
+</center>
+
+---
+
+### Tmux
+
+tmux - terminal multiplexer
+
+- More powerful than screen
+- Split both horizontally and vertically
+- Screen share
+- Window can be linked to an arbitrary number of session
+
+a) Multiple PuTTy/SecureCRT/X-Shell windows to one server
+
+v.s.
+
+b) One tmux window on server that can split easily
+
+---
+
+### Tmux (cont.)
+
+<img width="100%" src="img/tmux.jpg" />
+
+---
+
+### Tmux (cont.)
+
+Default hot key is `C-b`, e.g. `C-b ?` to get help.
+
+Mostly used keys (press C-b first):
+
+```
+"       Split the current pane into two, top and bottom.
+%       Split the current pane into two, left and right.
+0 to 9  Select windows 0 to 9.
+;       Move to the previously active pane.
+c       Create a new window.
+d       Detach the current client.
+n       Change to the next window.
+o       Select the next pane in the current window.
+p       Change to the previous window.
+z       Toggle zoom state of the current pane.
+```
+
+Ref: my [tmux.conf](https://github.com/ymattw/profiles/blob/master/tmux/tmux.conf)
+
+---
+
 class: center, middle
 
 ## Vim plugins
@@ -365,4 +470,5 @@ class: center, middle
 
 ## Thank you!
 
-[github.com/ymattw/productivity-tools](https://github.com/ymattw/productivity-tools)
+[github.com/ymattw/productivity-tools](https://github.com/ymattw/productivity-tools)<br>
+[github.com/ymattw/profiles](https://github.com/ymattw/profiles)
