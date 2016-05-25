@@ -29,7 +29,6 @@ Why tools matter
 - Shell config
 - Screen / tmux
 - Vim plugins
-- Mosh
 
 ---
 
@@ -458,11 +457,58 @@ Be a vim guru
 
 ---
 
-class: center, middle
+### Vim plugin managers
 
-## Mosh
+Options
 
-Connection allows roaming
+- [pathogen](https://github.com/tpope/vim-pathogen)
+- [Vundle](https://github.com/VundleVim/Vundle.vim)
+- [vim-plug](https://github.com/junegunn/vim-plug) (recommended)
+
+Example for vim-plug
+
+```vim
+Plug 'tpope/vim-markdown', {'for': 'markdown'}
+Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
+Plug 'fatih/vim-go', {'for': 'go'}
+```
+
+Ref: [What is the difference between the vim package
+managers?](http://vi.stackexchange.com/questions/388/what-is-the-difference-between-the-vim-package-managers)
+
+---
+
+### Where to find plugins
+
+Search on [vimawesome.com](http://vimawesome.com/).  Some examples:
+
+Syntax related
+
+- [altercation/vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
+- [tpope/vim-markdown](https://github.com/tpope/vim-markdown)
+- [elzr/vim-json](https://github.com/elzr/vim-json)
+- [digitaltoad/vim-jade](https://github.com/digitaltoad/vim-jade)
+
+---
+
+### Where to find plugins (cont.)
+
+Programming related
+
+- [moll/vim-node](https://github.com/moll/vim-node)
+- [hynek/vim-python-pep8-indent](https://github.com/hynek/vim-python-pep8-indent)
+- [fatih/vim-go](https://github.com/fatih/vim-go)
+- [Valloric/MatchTagAlways](https://github.com/Valloric/MatchTagAlways)
+- [Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+
+Utilities
+
+- [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
+- [ervandew/supertab](https://github.com/ervandew/supertab)
+- [ymattw/AutoComplPop](https://github.com/ymattw/AutoComplPop)
+- [godlygeek/tabular](https://github.com/godlygeek/tabular)
+
+See also my [vimrc](https://github.com/ymattw/profiles/blob/master/vim/vimrc).
 
 ---
 
