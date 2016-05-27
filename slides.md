@@ -7,7 +7,7 @@ class: center, middle
 Matthew Wang
 
 <small>
-Last updated: May 24, 2016<br>
+Last updated: May 27, 2016<br>
 [github.com/ymattw](https://github.com/ymattw)
 </small>
 
@@ -106,7 +106,7 @@ Tip for iTerm user (Preference > Profile > Keys):
 <img src="img/readline-iterm.jpg" />
 </center>
 
-Ref: https://en.wikipedia.org/wiki/GNU_Readline
+Ref: [GNU Readline](https://en.wikipedia.org/wiki/GNU_Readline) on wikipedia
 
 ---
 
@@ -179,7 +179,8 @@ Now just type `ssh dev`
 
 See all options: `man ssh_config`
 
-More tips see https://ymattw.github.io/ssh-essential/
+See [ymattw.github.io/ssh-essential](https://ymattw.github.io/ssh-essential/)
+for more tips
 
 ---
 
@@ -326,6 +327,7 @@ Refs:
 - [What are the cool features of zsh that beat other
   shells?](https://www.quora.com/What-are-the-cool-features-of-zsh-that-beat-other-shells)
 - My [zshrc](https://github.com/ymattw/profiles/blob/master/zsh/zshrc)
+- [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ---
 
@@ -351,7 +353,7 @@ You need only one terminal window
 
 ### Case study
 
-You are restoring your database from a backup, it won't complete in an hour,
+You are performing an upgrade to your service, it won't complete in an hour,
 and suddenly
 
 1. Your wireless network is down and you lost connection (and your process was
