@@ -93,10 +93,12 @@ C-s
 
 ### GNU readline (cont.)
 
+<b>
 ```
 Meta-. (Alt-.) or ESC-.
     Insert the last argument of the previous command
 ```
+</b>
 
 Tip for iTerm user (Preference > Profile > Keys):
 
